@@ -1,0 +1,262 @@
+
+ <!DOCTYPE html>
+<html>
+<head>
+	
+	<!-- Include meta tag to ensure proper rendering and touch zooming -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- Include jQuery Mobile stylesheets -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+<!-- Include the jQuery library -->
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Include the jQuery Mobile library -->
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<meta charset="UTF-8">
+
+<script>
+    $(document).ready(function() {
+        $('.grayadd').click(function() {
+            $(this).toggleClass('grayout');
+            if ($.mobile.activePage[0].id == "sigmarus") {
+            	sigmarustest();
+            }else if($.mobile.activePage[0].id == "katerina"){
+            	katerinatest();
+            }else if($.mobile.activePage[0].id == "veremos"){
+            	veremostest();
+            };
+        });
+
+    });
+    	function sigmarustest (){
+
+
+			var ninja = $("#blueninja").hasClass("grayout");
+			var jojo = $("#jojo").hasClass("grayout");
+			var NTsig = $("#NTsig").hasClass("grayout");
+			var bluecat = $("#bluecat").hasClass("grayout");
+
+				if (ninja && jojo && NTsig && bluecat) {
+				
+					$('.mainimg').addClass('mainimgdone');
+					$('.mainimgdone').removeClass('mainimg');
+					alert("You have all the monsters for Sigmarus! Time to 4* and awaken them!");
+				}else{
+					$('.mainimgdone').addClass('mainimg');
+					$('.mainimg').removeClass('mainimgdone');
+				};
+		};
+
+		function katerinatest (){
+
+
+			var BUkat = $("#BUkat").hasClass("grayout");
+			var NTkat = $("#NTkat").hasClass("grayout");
+			var werewolf = $("#werewolf").hasClass("grayout");
+			var barretta = $("#barretta").hasClass("grayout");
+
+				if (BUkat && NTkat && werewolf && barretta) {
+					$('.mainimg').addClass('mainimgdone');
+					$('.mainimgdone').removeClass('mainimg');
+					alert("You have all the monsters for Katerina! Time to 4* and awaken them!");
+				}else{
+					$('.mainimgdone').addClass('mainimg');
+					$('.mainimg').removeClass('mainimgdone');
+				};
+		};
+
+		function veremostest (){
+
+
+			var BUveremos = $("#BUveremos").hasClass("grayout");
+			var darkyeti = $("#darkyeti").hasClass("grayout");
+			var yellowvamp = $("#yellowvamp").hasClass("grayout");
+			var redsuccubus = $("#redsuccubus").hasClass("grayout");
+
+				if (BUveremos && darkyeti && yellowvamp && redsuccubus) {
+					$('.mainimg').addClass('mainimgdone');
+					$('.mainimgdone').removeClass('mainimg');
+					alert("You have all the monsters for Veremos! Time to 4* and awaken them!");
+				}else{
+					$('.mainimgdone').addClass('mainimg');
+					$('.mainimg').removeClass('mainimgdone');
+				};
+		};
+
+
+</script>
+
+<style>
+.center{
+	margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+img{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+    height: 120px;
+
+}
+.centtext{
+	text-align: center;
+}
+span{
+	text-align:center;
+}
+.grayout {
+-webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+            filter: grayscale(100%);
+ border-style: solid;
+
+}
+.mainimgdone{
+	border-style: solid;
+	border-color: green;
+	border-width: 10px;
+
+}
+.mainimg{
+	border-style: solid;
+	border-color: red;
+	border-width: 10px;
+}
+
+</style>
+<title>Final Porject Mobile Version</title>
+</head>
+<body>
+	<div data-role="page" id="mainpg">
+
+		<div data-role="main" class="ui-grid-b">
+			<div data-role="header" class="centtext">SUMMONERS WAR FUSION TRACKER</div>
+			<br><br><br>
+			
+			<div class="ui-block-a">
+				<a href="#sigmarus"><img src="./imgs/sigmarus.png" alt="Sigmarus, the blue Pheonix" height="120px" width="120px" class="centimg"><br><span>Press here to view the materials needed for Sigmarus</span></a>
+			</div>
+
+
+			<div class="ui-block-b">
+				<a href="#katerina"><img src="./imgs/katerina.png" alt="Katerina, the yellow Valk" height="120px" width="120px" class="centimg"><br><span>Press here to view the materials needed for Katerina</span></a>
+			</div>
+
+
+			<div class="ui-block-c">
+				<a href="#veremos"><img src="./imgs/veremos.png" alt="Veremos, the dark Ifrit" height="120px" width="120px" class="centimg"><br><span>Press here to view the materials needed for Veremos</span></a>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div data-role="page" id="sigmarus">
+		<div data-role="main">
+			<div data-role="header" class="centtext">SUMMONERS WAR FUSION TRACKER</div>
+			<br><br><br>
+
+
+			<img src="./imgs/sigmarus.png" alt="Sigmarus, the blue Pheonix" class="centimg mainimg">
+<br><br>
+			<div class="ui-grid-b">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b"><img src="./imgs/bluecat.png" alt="" class="grayadd" id="bluecat"> <br></div>
+				<div class="ui-block-c"></div>
+
+				<div class="ui-block-a">
+					<img src="./imgs/blueninja.png" alt="blue ninja" class="grayadd" id="blueninja">
+				</div>
+				<div class="ui-block-b">
+					<img src="./imgs/jojo.png" alt="jojo" class="grayadd" id="jojo">
+				</div>
+				<div class="ui-block-c">
+					<img src="./imgs/yellowninetails.png" alt="yellow nine tails" class="grayadd" id="NTsig">
+				</div>
+			</div>
+			<br><br>
+<a href="./index.php">Back to Home!</a>
+			
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+	<div data-role="page" id="katerina">
+		<div data-role="main">
+			<div data-role="header" class="centtext">SUMMONERS WAR FUSION TRACKER</div>
+			<br><br><br>
+
+
+			<img src="./imgs/katerina.png" alt="Katerina the Yellow Valk" class="centimg mainimg">
+<br><br>
+			<div class="ui-grid-b">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b"><img src="./imgs/werewolf.png" alt="werewolf" class="grayadd" id="werewolf"> <br></div>
+				<div class="ui-block-c"></div>
+
+				<div class="ui-block-a">
+					<img src="./imgs/barretta.png" alt="barretta" class="grayadd" id="barretta">
+				</div>
+				<div class="ui-block-b">
+					<img src="./imgs/blueundine.png" alt="blue undine" class="grayadd" id="BUkat">
+				</div>
+				<div class="ui-block-c">
+					<img src="./imgs/yellowninetails.png" alt="" class="grayadd" id="NTkat">
+				</div>
+			</div>
+			<br><br>
+<a href="./index.php">Back to Home!</a>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+	<div data-role="page" id="veremos">
+		<div data-role="main">
+			<div data-role="header" class="centtext">SUMMONERS WAR FUSION TRACKER</div>
+			<br><br><br>
+
+
+			<img src="./imgs/veremos.png" alt="Veremos the dark Ifrit" class="centimg mainimg">
+<br><br>
+			<div class="ui-grid-b">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b"><img src="./imgs/darkyeti.png" alt="dark yeti" class="grayadd" id="darkyeti"> <br></div>
+				<div class="ui-block-c"></div>
+
+				<div class="ui-block-a">
+					<img src="./imgs/yellowvamp.png" alt="yellowvamp" class="grayadd" id="yellowvamp">
+				</div>
+				<div class="ui-block-b">
+					<img src="./imgs/blueundine.png" alt="blue undine" class="grayadd" id="BUveremos">
+				</div>
+				<div class="ui-block-c">
+					<img src="./imgs/redsuccubus.png" alt="red succubus" class="grayadd" id="redsuccubus">
+				</div>
+			</div>
+			<br><br>
+<a href="./index.php">Back to Home!</a>
+		</div>
+	</div>
+</body>
+</html>
